@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>合成抵抗計算</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="../../images/001.gif" class="header-logo">
+  <h1>換 算 ア プ リ</h1>
+</header>
+
+<h2>合成抵抗計算</h2>
+
+<div id="resistorContainer">
+  <input type="number" class="resistor" placeholder="R1 (Ω)">
+  <input type="number" class="resistor" placeholder="R2 (Ω)">
+</div>
+
+<button onclick="addResistor()">＋追加</button>
+<button onclick="removeResistor()">－削除</button>
+
+<br><br>
+
+<select id="connectionType">
+  <option value="series">直列</option>
+  <option value="parallel">並列</option>
+</select>
+
+<button onclick="calcEquivalent()">計算</button>
+
+<p id="result"></p>
+
+<a href="index.html" class="card">戻る</a>
+<br>
+<a href="../../index.html" class="card">🏠 ホームへ戻る</a>
+
+<footer>
+  <img src="../../images/007.png" class="footer-logo">
+  <img src="../../images/006.gif" class="footer-logo">
+  <img src="../../images/SET1.png" class="footer-logo">
+  <span>Ver 1.0.0</span>
+</footer>
+
+<script src="../../js/electric/equivalentresistance.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抵抗温度換算</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header>
+  <img src="../../images/001.gif" class="header-logo">
+  <h1>換 算 ア プ リ</h1>
+</header>
+    
+<h2>抵抗温度換算</h2>
+
+<input 
+ type="number" 
+ id="resistance" 
+ step="0.0001" 
+ placeholder="測定抵抗値(Ω)">
+
+<input
+ type="number"
+ id="temperature"
+ step="0.1"
+ placeholder="測定温度(℃)">
+
+<select id="material">
+    <option value="copper">銅</option>
+    <option value="aluminum">アルミニウム</option>
+    <option value="iron">鉄</option>
+    <option value="castiron">鋳鉄</option>
+    <option value="silver">銀</option>
+</select>
+
+<button onclick="calcResistance20()">
+換算
+</button>
+
+<p id="temp20Result"></p>
+
+<a href="index.html" class="card">戻る</a>
+<br>
+<a href="../../index.html" class="card">🏠 ホームへ戻る</a>
+
+<footer>
+  <img src="../../images/007.png" class="footer-logo">
+  <img src="../../images/006.gif" class="footer-logo">
+  <img src="../../images/SET1.png" class="footer-logo">
+  <span>Ver 1.0.0</span>
+</footer>
+
+<script src="../../js/electric/resistancetemp20.js"></script>
+
+</body>
+</html>

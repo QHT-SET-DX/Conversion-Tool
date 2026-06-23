@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>SF6ガス回収率</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="../../images/001.gif" class="header-logo">
+  <h1>換 算 ア プ リ</h1>
+</header>
+
+<h2>SF6ガス回収率</h2>
+
+<input type="number" id="beforePressure" step="0.001" Placeholder="回収前ガス圧">
+
+<select id="beforeUnit">
+    <option value="MPa,G">MPa・G</option>
+    <option value="MPa,abs">MPa・abs</option>
+    <option value="kgf,G">kgf/cm²・G</option>
+    <option value="kgf,abs">kgf/cm²・abs</option>
+</select>
+
+<input type="number" id="beforeTemp" step="0.1" placeholder="回収前温度 (℃)">
+
+<input type="number" id="afterPressure" step="0.001" Placeholder="回収後ガス圧">
+
+<select id="afterUnit">
+    <option value="Pa">Pa</option>
+    <option value="Torr">Torr</option>
+    <option value="bar">bar</option>
+</select>
+
+<input type="number" id="afterTemp" step="0.1" placeholder="回収後温度 (℃)">
+
+<button onclick= "calcRecoveryRate()">
+回収率計算
+</button>
+
+<p id="recoveryRateResult"></p>
+
+<a href="index.html" class="card">戻る</a>
+<br>
+<a href="../../index.html" class="card">🏠 ホームへ戻る</a>
+
+<footer>
+  <img src="../../images/007.png" class="footer-logo">
+  <img src="../../images/006.gif" class="footer-logo">
+  <img src="../../images/SET1.png" class="footer-logo">
+  <span>Ver 1.0.0</span>
+</footer>
+
+<script src="../../js/gas/recovery.js"></script>
+
+</body>
+</html>
