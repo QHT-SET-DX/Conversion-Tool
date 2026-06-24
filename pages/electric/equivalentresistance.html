@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>合成抵抗計算</title>
   <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -16,8 +17,23 @@
 <h2>合成抵抗計算</h2>
 
 <div id="resistorContainer">
-  <input type="number" class="resistor" placeholder="R1 (Ω)">
-  <input type="number" class="resistor" placeholder="R2 (Ω)">
+
+  <div class="resistor-row">
+    <input
+      type="number"
+      class="resistor"
+      placeholder="R1">
+    <span class="unit">Ω</span>
+  </div>
+
+  <div class="resistor-row">
+    <input
+      type="number"
+      class="resistor"
+      placeholder="R2">
+    <span class="unit">Ω</span>
+  </div>
+
 </div>
 
 <button onclick="addResistor()">＋追加</button>
@@ -25,10 +41,13 @@
 
 <br><br>
 
-<select id="connectionType">
-  <option value="series">直列</option>
-  <option value="parallel">並列</option>
-</select>
+<div class="input-group">
+ <select id="connectionType">
+   <option value="series">直列</option>
+   <option value="parallel">並列</option>
+ </select>
+ <span>回路</span>
+</div>
 
 <button onclick="calcEquivalent()">計算</button>
 

@@ -15,25 +15,34 @@
     
 <h2>抵抗温度換算</h2>
 
-<input 
- type="number" 
- id="resistance" 
- step="0.0001" 
- placeholder="測定抵抗値(Ω)">
+<div class="input-group">
+ <input 
+   type="number" 
+   id="resistance" 
+   step="0.0001" 
+   placeholder="測定抵抗値">
+  <span>Ω</span>
+</div>
 
-<input
- type="number"
- id="temperature"
- step="0.1"
- placeholder="測定温度(℃)">
+<div class="input-group">
+  <input
+   type="number"
+   id="temperature"
+   step="0.1"
+   placeholder="測定時温度">
+  <span>℃</span>
+</div>
 
-<select id="material">
+<div class="input-group">
+ <span>導体材質</span>
+ <select id="material">
     <option value="copper">銅</option>
     <option value="aluminum">アルミニウム</option>
     <option value="iron">鉄</option>
     <option value="castiron">鋳鉄</option>
     <option value="silver">銀</option>
-</select>
+ </select>
+</div>
 
 <button onclick="calcResistance20()">
 換算

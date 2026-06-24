@@ -9,13 +9,20 @@ function addResistor(){
         return;
     }
 
-    const input = document.createElement("input");
-    
-    input.type = "number";
-    input.className = "resistor";
-    input.placeholder = `R${count + 1} (Ω)`;
+    const row = document.createElement("div");
 
-    container.appendChild(input);
+    row.className = "resistor-row";
+
+    row.innerHTML = `
+     <input
+        type="number"
+        class="resistor"
+        placeholder="R${count + 1}">
+
+     <span class="unit">Ω</span>
+    `;
+
+    container.appendChild(row);
 }
 
 function removeResistor(){
@@ -28,7 +35,12 @@ function removeResistor(){
         return;
     }
 
-    container.removeChild(resistors[resistors.length - 1]);
+    const rows =
+    container.getElementsByClassName("resistor-row");
+
+    container.removeChild(
+     rows[rows.length - 1]
+    );
 }
 
 function calcEquivalent(){

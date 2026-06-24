@@ -188,3 +188,25 @@ footer{
 .unit-select{
   width:110px;
 }
+
+/* =====================
+   合成抵抗
+===================== */
+
+.resistor-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    max-width:350px;
+
+    margin:8px auto;
+}
+
+.resistor-row input{
+
+    flex:1;
+}
