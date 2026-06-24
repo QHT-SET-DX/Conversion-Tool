@@ -80,6 +80,18 @@ function calcEquivalent(){
     }
 
     document.getElementById("result").innerHTML =
-    `合成抵抗：${equivalent.toFixed(3)} Ω`;
+    `
+    <div class="result-card">
+
+    <div class="result-title">
+        合成抵抗
+    </div>
+
+    <div class="result-value">
+        ${equivalent.toFixed(2)} Ω
+    </div>
+    
+    </div>
+    `;
 
 }

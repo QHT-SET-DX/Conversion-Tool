@@ -13,13 +13,13 @@ function convertPressure(){
         mpa = value;
     }
     else if(unit === "pa"){
-        mpa =value * 1000000;
+        mpa =value / 1000000;
     }
     else if(unit === "kgf"){
         mpa = value / 10.1972;
     }
     else if(unit === "torr"){
-        mpa = value * 0.000133322
+        mpa = value * 133.322 / 1000000;
     }
     else if(unit === "bar"){
         mpa = value / 10;
@@ -30,7 +30,7 @@ function convertPressure(){
 
     //全単位へ変換
     const kgf = mpa * 10.1972;
-    const torr = mpa * 0.000133322;
+    const torr = mpa * 7500.62;
     const bar = mpa * 10;
     const psi = mpa * 145.038;
     const kpa = mpa * 1000;
@@ -38,13 +38,24 @@ function convertPressure(){
 
     document.getElementById("result").innerHTML =
     `
-    MPa：${mpa.toFixed(3)}<br>
-    kgf/cm²：${kgf.toFixed(3)}<br>
-    Torr：${torr.toFixed(3)}<br>
-    bar：${bar.toFixed(3)}<br>
-    psi：${psi.toFixed(3)}<br>
-    kPa：${kpa.toFixed(1)}<br>
-    Pa：${pa.toFixed(0)}
+    <div class="result-card">
+
+    <div class="result-title">
+        換算値
+    </div>
+
+    <div class="result-value">
+     MPa：${mpa.toFixed(3)}<br>
+     kgf/cm²：${kgf.toFixed(3)}<br>
+     Torr：${torr.toFixed(3)}<br>
+     bar：${bar.toFixed(3)}<br>
+     psi：${psi.toFixed(3)}<br>
+     kPa：${kpa.toFixed(1)}<br>
+     Pa：${pa.toFixed(0)}
+    </div>
+    
+    </div>
+    
     `;   
 
 }

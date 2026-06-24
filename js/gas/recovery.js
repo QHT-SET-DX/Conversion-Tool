@@ -78,6 +78,18 @@ function calcRecoveryRate(){
 
     //結果表示
     document.getElementById("recoveryRateResult").innerHTML =
-    `回収率: ${recoveryRate.toFixed(2)} %`;
+    `
+    <div class="result-card">
+
+    <div class="result-title">
+        回収率
+    </div>
+
+    <div class="result-value">
+        ${recoveryRate.toFixed(2)} %
+    </div>
+    
+    </div>
+    `;
 
 }

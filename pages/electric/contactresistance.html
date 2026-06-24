@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>接触抵抗測定値換算</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header>
+  <img src="../../images/001.gif" class="header-logo">
+  <h1>換 算 ア プ リ</h1>
+</header>
+    
+<h2>接触抵抗測定値換算</h2>
+
+<div class="input-group">
+    <input 
+     type="number" 
+     id="voltage" 
+     placeholder="接触抵抗測定値">
+    <span>mV</span>
+</div>
+
+<div class="input-group">
+    <input 
+     type="number" 
+     id="current" 
+     placeholder="流した電流">
+    <span>A</span>
+</div>
+
+<div class="input-group">
+    <input 
+     type="number" 
+     id="tempereture" 
+     placeholder="測定温度">
+    <span>℃</span>
+</div>
+
+<div class="input-group">
+  
+ <span>導体の材質</span>
+
+ <select id="material">
+   <option value="aluminum">アルミニウム</option>
+   <option value="copper">銅</option>
+    <option value="iron">鉄</option>
+    <option value="castiron">鋳鉄</option>
+    <option value="silver">銀</option>
+ </select>
+
+</div>
+
+<button onclick="contactResistance()">
+換算
+</button>
+
+<p id="contactResistanceResult"></p>
+
+<div class="menu">
+ <a href="index.html" class="card">戻る</a>
+ <a href="../../index.html" class="card">🏠 ホームへ戻る</a>
+</div>
+
+<footer>
+  <img src="../../images/007.png" class="footer-logo">
+  <img src="../../images/006.gif" class="footer-logo">
+  <img src="../../images/SET1.png" class="footer-logo">
+  <span>Ver 1.0.0</span>
+</footer>
+
+<script src="../../js/electric/contactresistance.js"></script>
+
+</body>
+</html>

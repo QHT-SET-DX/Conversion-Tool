@@ -15,16 +15,23 @@
 
 <h2>ガス圧単位換算</h2>
 
-<input type="number" id="pressure">
+<div class="input-group">
 
-<select id="unit">
+ <input 
+   type="number" 
+   id="pressure"
+   placeholder="圧力を入力">
+
+ <select id="unit" class="unit-select">
     <option value="mpa">MPa</option>
     <option value="pa">Pa</option>
     <option value="kgf">kgf/cm²</option>
     <option value="torr">Torr</option>
     <option value="bar">bar</option>
     <option value="psi">psi</option>
-</select>
+ </select>
+
+</div>
 
 <button onclick="convertPressure()">
 換算
@@ -32,9 +39,10 @@
 
 <p id="result"></p>
 
-<a href="index.html" class="card">戻る</a>
-<br>
-<a href="../../index.html" class="card">🏠 ホームへ戻る</a>
+<div class="menu">
+ <a href="index.html" class="card">戻る</a>
+ <a href="../../index.html" class="card">🏠 ホームへ戻る</a>
+</div>
 
 <footer>
   <img src="../../images/007.png" class="footer-logo">

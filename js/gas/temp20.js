@@ -93,12 +93,56 @@ function calc20deg(){
     //結果表示
     document.getElementById("temp20Result").innerHTML = 
     `
-    絶対圧: ${displayAbsPressure.toFixed(3)} ${displayUnit}<br>
-    <br>
-    SF6 20℃換算ゲージ圧:${displaySf6Gauge20.toFixed(3)} ${displayUnit}<br>
-    SF6 20℃換算絶対圧:${displaySf6Abs20.toFixed(3)} ${displayUnit}<br>
-    <br>
-    理想気体 20℃換算ゲージ圧: ${displayGauge20.toFixed(3)} ${displayUnit}<br>
-    理想気体 20℃換算絶対圧: ${displayAbs20.toFixed(3)} ${displayUnit}
+    <div class="result-card">
+
+    <div class="result-title">
+        絶対圧
+    </div>
+
+    <div class="result-value">
+        ${displayAbsPressure.toFixed(3)} ${displayUnit}
+    </div>
+    
+    </div>
+
+    <div class="result-card">
+
+    <div class="result-title">
+        SF6 20℃換算
+    </div>
+
+    <div>
+        ゲージ圧：
+        <strong>${displaySf6Gauge20.toFixed(3)}</strong>
+        ${displayUnit}
+    </div>
+
+    <div>
+        絶対圧：
+        <strong>${displaySf6Abs20.toFixed(3)}</strong>
+        ${displayUnit}
+    </div>
+    
+    </div>
+
+    <div class="result-card">
+
+    <div class="result-title">
+        理想気体20℃換算
+    </div>
+
+    <div>
+        ゲージ圧：
+        <strong>${displayGauge20.toFixed(3)}</strong>
+        ${displayUnit}
+    </div>
+
+    <div>
+        絶対圧：
+        <strong>${displayAbs20.toFixed(3)}</strong>
+        ${displayUnit}
+    </div>
+    
+    </div>
     `;
 }

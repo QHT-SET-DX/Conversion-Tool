@@ -24,8 +24,17 @@ function calcResistance20(){
 
     document.getElementById("temp20Result").innerHTML = 
     `
-    20℃換算抵抗値:
-    ${resistance20.toFixed(6)} Ω
+    <div class="result-card">
+
+    <div class="result-title">
+        20℃換算抵抗値
+    </div>
+
+    <div class="result-value">
+        ${resistance20.toFixed(2)} Ω
+    </div>
+    
+    </div>
     `;
 
 }
