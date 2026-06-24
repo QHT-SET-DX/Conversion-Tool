@@ -40,12 +40,23 @@
   <span>Ver 1.0.0</span>
 </footer>
 
-</body>
-
 <script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./service-worker.js");
+if("serviceWorker" in navigator){
+
+  navigator.serviceWorker
+    .register("./service-worker.js")
+
+    .then(() => {
+      console.log("Service Worker Registered");
+    })
+
+    .catch(err => {
+      console.error(err);
+    });
+
 }
 </script>
+
+</body>
 
 </html>

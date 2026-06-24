@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>標準締付トルク</title>
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+
+<header>
+  <img src="../../../images/001.gif" class="header-logo">
+  <h1>換 算 ア プ リ</h1>
+</header>
+
+<h2>標準締付トルク</h2>
+
+<div class="input-group">
+    <select id="boltSize">
+        <option value="M3">M3 (5.5mm)</option>
+        <option value="M4">M4 (7mm)</option>
+        <option value="M5">M5 (8mm)</option>
+        <option value="M6">M6 (10mm)</option>
+        <option value="M7">M7 (11mm)</option>
+        <option value="M8">M8 (13mm)</option>
+        <option value="M10">M10 (17mm)</option>
+        <option value="M12">M12 (19mm)</option>
+        <option value="M14">M14 (22mm)</option>
+        <option value="M16">M16 (24mm)</option>
+        <option value="M18">M18 (28mm)</option>
+        <option value="M20">M20 (30mm)</option>
+        <option value="M22">M22 (32mm)</option>
+        <option value="M24">M24 (36mm)</option>
+    </select>
+</div>
+
+<button onclick="showTorque()">
+表示
+</button>
+
+<div id="torqueResult"></div>
+
+<div class="menu">
+ <a href="index.html" class="card">戻る</a>
+ <a href="../../../index.html" class="card">🏠 ホームへ戻る</a>
+</div>
+
+<footer>
+  <img src="../../../images/007.png" class="footer-logo">
+  <img src="../../../images/006.gif" class="footer-logo">
+  <img src="../../../images/SET1.png" class="footer-logo">
+  <span>Ver 1.0.0</span>
+</footer>
+
+<script src="../../../js/other/standerdtorque.js"></script>
+
+</body>
+</html>
