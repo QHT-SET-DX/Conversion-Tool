@@ -47,16 +47,16 @@ function calcRecoveryRate(){
         beforeMPaAbs = beforePressure * 0.0980665;
     }
 
-    let afterMPaAbs;
+    let afterPaAbs;
 
     if(afterUnit === "Pa"){
-        afterMPaAbs = afterPressure;
+        afterPaAbs = afterPressure;
     }
     else if(afterUnit === "Torr"){
-        afterMPaAbs = afterPressure * 133.322;
+        afterPaAbs = afterPressure * 133.322;
     }
     else if(afterUnit === "bar"){
-        afterMPaAbs = afterPressure * 100000;
+        afterPaAbs = afterPressure * 100000;
     }
     
     //SF620℃換算
@@ -70,7 +70,7 @@ function calcRecoveryRate(){
     beforeMPaAbs20 * 1000000;
 
     const afterPaAbs20 =
-    afterMPaAbs * (273.15 + 20) / (273.15 + afterTemp);
+    afterPaAbs * (273.15 + 20) / (273.15 + afterTemp);
 
     //回収率計算
     const recoveryRate =

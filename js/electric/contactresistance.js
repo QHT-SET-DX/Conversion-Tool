@@ -23,7 +23,7 @@ function contactResistance(){
     const alpha = alphaTable[material];
 
     if(current <=0){
-        document.getElementById("contactresistanceResult").innerHTML =
+        document.getElementById("contactResistanceResult").innerHTML =
         "電流は0Aより大きい値を入力してください"
         return;
     }

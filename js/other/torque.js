@@ -72,7 +72,7 @@ function showTorque(){
         M12: { spanner: 19,  torqueNm: 41.2, torqueKgf: 420 },
         M14: { spanner: 22,  torqueNm: 67.6, torqueKgf: 690 },
         M16: { spanner: 24,  torqueNm: 100, torqueKgf: 1020 },
-        M18: { spanner: 27,  torqueNm: 147, torqueKgf: 1500 },
+        M18: { spanner: 28,  torqueNm: 147, torqueKgf: 1500 },
         M20: { spanner: 30,  torqueNm: 203, torqueKgf: 2070 },
         M22: { spanner: 32,  torqueNm: 263, torqueKgf: 2680 },
         M24: { spanner: 36,  torqueNm: 338, torqueKgf: 3450 }
