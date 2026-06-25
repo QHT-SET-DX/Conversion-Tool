@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ガス圧20℃換算</title>
+  <title>SF6ガス 充填量</title>
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 
@@ -14,39 +14,35 @@
   <h1>換 算 ア プ リ</h1>
 </header>
 
-<h2>ガス圧20℃換算</h2>
+<h2>SF6ガス 充填目標圧力</h2>
 
 <div class="input-group">
+    <input
+      type="number"
+      id="target20Pressure"
+      placeholder="20℃基準目標圧力">
 
- <input 
-   type="number"
-   id="gaugePressure" 
-   step="0.001" 
-   Placeholder="ゲージ圧">
-
- <select id="pressureUnit">
-    <option value="MPa">MPa</option>
-    <option value="kgf">kgf/cm²</option>
- </select>
-
+    <select id="targetUnit">
+        <option value="MPa,G">MPa・G</option>
+        <option value="MPa,abs">MPa・abs</option>
+        <option value="kgf,G">kgf/cm²・G</option>
+        <option value="kgf,abs">kgf/cm²・abs</option>
+    </select>
 </div>
 
 <div class="input-group">
-
- <input 
-   type="number" 
-   id="currentTemp" 
-   step="0.1" 
-   placeholder="現在温度">
- <span>℃</span>
- 
+    <input
+      type="number"
+      id="currentTemp"
+      placeholder="現在温度">
+    <span>℃</span>
 </div>
 
-<button onclick= "calc20deg()">
-換算
+<button onclick="calcFillingPressure()">
+計算
 </button>
 
-<p id="temp20Result"></p>
+<div id="fillingResult"></div>
 
 <br>
 <hr>
@@ -66,7 +62,7 @@
 
 <script src="../../version.js"></script>
 
-<script src="../../js/gas/temp20.js"></script>
+<script src="../../js/gas/filling.js"></script>
 
 </body>
 </html>

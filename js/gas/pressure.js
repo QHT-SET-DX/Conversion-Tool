@@ -45,13 +45,13 @@ function convertPressure(){
     </div>
 
     <div class="result-value">
-     MPa：${mpa.toFixed(3)}<br>
-     kgf/cm²：${kgf.toFixed(3)}<br>
-     Torr：${torr.toFixed(3)}<br>
-     bar：${bar.toFixed(3)}<br>
-     psi：${psi.toFixed(3)}<br>
-     kPa：${kpa.toFixed(1)}<br>
-     Pa：${pa.toFixed(0)}
+     　・　${mpa.toFixed(3)} MPa<br>
+     　・　${kgf.toFixed(3)} kgf/cm²<br>
+     　・　${torr.toFixed(3)} torr<br>
+     　・　${bar.toFixed(3)} bar<br>
+     　・　${psi.toFixed(3)} psi<br>
+     　・　${kpa.toFixed(1)} kPa<br>
+     　・　${pa.toFixed(0)} Pa
     </div>
     
     </div>

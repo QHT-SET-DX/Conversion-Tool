@@ -56,7 +56,18 @@
 
 <p>
 　・回収率(%) = <br>
-　　(回収前量 - 回収後量) ÷ 回収前量 × 100
+　　(回収前量 - 回収後量) / 回収前量 × 100
+</p>
+
+</div>
+
+<div class="formula-card">
+
+<h3>ガス回収目標圧力</h3>
+
+<p>
+　・回収目標圧(Pa・abs) = <br>
+　　回収前圧(Pa・abs) * (1 - 回収率(%) / 100)
 </p>
 
 </div>
@@ -83,8 +94,10 @@
   <img src="../../images/007.png" class="footer-logo">
   <img src="../../images/006.gif" class="footer-logo">
   <img src="../../images/SET1.png" class="footer-logo">
-  <span>Ver 1.0.0</span>
+  <span id="version"></span>
 </footer>
+
+<script src="../../version.js"></script>
 
 </body>
 </html>

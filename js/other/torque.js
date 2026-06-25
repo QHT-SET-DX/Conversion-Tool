@@ -1,3 +1,60 @@
+function convertTorque(){
+
+    const value =
+    Number(document.getElementById("torqueInput").value);
+
+    const unit =
+    document.getElementById("torqueUnit").value;
+
+    let nm;
+    let kgfcm;
+
+    if(unit === "Nm"){
+
+        nm = value;
+        kgfcm = value * 10.1972;
+        kgfm = value * 0.101972;
+
+    }
+    else if(unit === "kgfcm"){
+
+        kgfcm = value;
+        kgfm = value / 100
+        nm = value / 10.1972;
+
+    }
+    else if(unit === "kgfm"){
+        
+        kgfm = value;
+        kgfcm = value *100
+        nm = value /0.101972
+        
+    }
+
+    document.getElementById("torqueConvertResult").innerHTML =
+    `
+    <div class="result-card">
+
+        <div class="result-title">
+            トルク換算結果
+        </div>
+
+        <div class="result-value">
+            ${nm.toFixed(2)} N・m
+        </div>
+
+        <div class="result-value">
+            ${kgfcm.toFixed(1)} kgf・cm
+        </div>
+
+        <div class="result-value">
+            ${kgfm.toFixed(3)} kgf・m
+        </div>
+
+    </div>
+    `;
+}
+
 function showTorque(){
 
     const size =

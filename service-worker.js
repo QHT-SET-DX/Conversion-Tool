@@ -1,4 +1,4 @@
-const CACHE_NAME = "conversion-tool-v1.0.0";
+const CACHE_NAME = "conversion-tool-v1.1.0";
 
 const urlsToCache = [
 
@@ -11,6 +11,7 @@ const urlsToCache = [
   "/pages/gas/pressure.html",
   "/pages/gas/temp20.html",
   "/pages/gas/recovery.html",
+  "/pages/gas/filling.html",
 
   "/pages/electric/index.html",
   "/pages/electric/equivalentresistance.html",
@@ -22,17 +23,18 @@ const urlsToCache = [
   "/pages/education/gasconversions.html",
 
   "/pages/education/other/index.html",
-  "/pages/education/other/standerdtorque.html",
+  "/pages/education/other/torque.html",
 
   "/js/gas/pressure.js",
   "/js/gas/temp20.js",
   "/js/gas/recovery.js",
-
+  "/js/gas/filling.js",
+  
   "/js/electric/equivalentresistance.js",
   "/js/electric/resistancetemp20.js",
   "/js/electric/contactresistance.js",
 
-  "/js/other/standerdtorque.js",
+  "/js/other/torque.js",
   
   "/images/001.gif",
   "/images/006.gif",

@@ -93,3 +93,65 @@ function calcRecoveryRate(){
     `;
 
 }
+
+function calcTargetPressure(){
+
+    const pressure =
+    Number(document.getElementById("targetPressure").value);
+
+    const unit =
+    document.getElementById("targetUnit").value;
+
+    const recovery =
+    Number(document.getElementById("targetRecovery").value);
+
+    let absMPa;
+
+    if(unit === "MPa,G"){
+        absMPa = pressure + 0.101325;
+    }
+    else if(unit === "MPa,abs"){
+        absMPa = pressure;
+    }
+    else if(unit === "kgf,G"){
+        absMPa = pressure * 0.0980665 + 0.101325;
+    }
+    else if(unit === "kgf,abs"){
+        absMPa = pressure * 0.0980665;
+    }
+
+    const absPa =
+    absMPa * 1000000;
+
+    const remainGasPa =
+    absPa * (1 - recovery / 100);
+
+    const remainGasTorr =
+    remainGasPa / 133.322
+
+    const remainGasBar =
+    remainGasPa / 100000
+
+    document.getElementById("targetPressureResult").innerHTML =
+    `
+    <div class="result-card">
+
+        <div class="result-title">
+            目標残圧
+        </div>
+
+        <div class="result-value">
+            ${remainGasPa.toFixed(0)} Pa
+        </div>
+
+        <div class="result-value">
+            ${remainGasTorr.toFixed(1)} Torr
+        </div>
+
+        <div class="result-value">
+            ${remainGasBar.toFixed(4)} bar
+        </div>
+        
+    </div>
+    `;
+}

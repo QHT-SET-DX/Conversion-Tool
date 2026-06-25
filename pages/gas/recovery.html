@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SF6ガス回収率</title>
+  <title>SF6ガス 回収率</title>
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 
@@ -14,7 +14,7 @@
   <h1>換 算 ア プ リ</h1>
 </header>
 
-<h2>SF6ガス回収率</h2>
+<h2>SF6ガス 回収率算出</h2>
 
 <div class="input-group">
 
@@ -79,10 +79,56 @@
 </div>
 
 <button onclick= "calcRecoveryRate()">
-回収率計算
+計算
 </button>
 
 <p id="recoveryRateResult"></p>
+
+<br>
+<hr>
+
+<h2>SF6ガス 目標回収圧力算出</h2>
+
+<div class="input-group">
+
+  <span>回収前ガス圧</span>
+  
+  <input
+    type="number"
+    id="targetPressure"
+    placeholder="ガス圧">
+  
+  <select id="targetUnit">
+    <option value="MPa,G">MPa・G</option>
+    <option value="MPa,abs">MPa・abs</option>
+    <option value="kgf,G">kgf/cm²・G</option>
+    <option value="kgf,abs">kgf/cm²・abs</option>
+  </select>
+
+</div>
+
+<div class="input-group">
+
+  <span>目標回収率</span>
+
+  <input
+    type="number"
+    id="targetRecovery"
+    placeholder="回収率(%)">
+
+  <span>%</span>
+
+</div>
+
+<button onclick="calcTargetPressure()">
+計算
+</button>
+
+<div id="targetPressureResult"></div>
+
+<br>
+<hr>
+<br>
 
 <div class="menu">
  <a href="index.html" class="card">戻る</a>
@@ -93,8 +139,10 @@
   <img src="../../images/007.png" class="footer-logo">
   <img src="../../images/006.gif" class="footer-logo">
   <img src="../../images/SET1.png" class="footer-logo">
-  <span>Ver 1.0.0</span>
+  <span id="version"></span>
 </footer>
+
+<script src="../../version.js"></script>
 
 <script src="../../js/gas/recovery.js"></script>
 
