@@ -105,6 +105,17 @@ function calcTargetPressure(){
     const recovery =
     Number(document.getElementById("targetRecovery").value);
 
+    //入力値チェック
+    if (
+     pressure < 0 ||
+     isNaN(recovery)
+    ){
+     document.getElementById("targetPressureResult").innerHTML =
+     "入力値を確認してください";
+     return;
+    }
+
+    //単位変換
     let absMPa;
 
     if(unit === "MPa,G"){
@@ -120,6 +131,7 @@ function calcTargetPressure(){
         absMPa = pressure * 0.0980665;
     }
 
+    //目標値計算
     const absPa =
     absMPa * 1000000;
 
@@ -132,6 +144,7 @@ function calcTargetPressure(){
     const remainGasBar =
     remainGasPa / 100000
 
+    //結果表示
     document.getElementById("targetPressureResult").innerHTML =
     `
     <div class="result-card">

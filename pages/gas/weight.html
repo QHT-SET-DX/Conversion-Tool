@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SF6ガス重量</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="../../images/001.gif" class="header-logo">
+  <h1>換 算 ア プ リ</h1>
+</header>
+
+<h2>回収タンク 必要最低容量計算</h2>
+<h3>（最大貯蔵圧力の80%充填時）</h3>
+
+<div class="input-group">
+
+  <span>機器ガス量</span>
+ 
+  <input type="number" 
+   id="gasWeight" 
+   step="0.1" 
+   Placeholder="重量">
+
+  <span>kg</span>
+
+</div>
+
+<div class="input-group">
+
+  <span>回収時温度</span>
+ 
+  <input type="number" 
+   id="temp" 
+   step="0.1" 
+   Placeholder="温度">
+
+  <span>℃</span>
+
+</div>
+
+<div class="input-group">
+
+  <span>回収タンク貯蔵圧力</span>
+ 
+  <input type="number" 
+   id="recoveryTankPressure" 
+   step="0.01" 
+   Placeholder="圧力">
+
+  <span>MPa・abs</span>
+
+</div>
+
+<button onclick= "calcTankCapacity()">
+計算
+</button>
+
+<p id="tankCapacityResult"></p>
+
+<br>
+<hr>
+<br>
+
+<h2>SF6ガス 取り扱い重量計算</h2>
+
+<div class="input-group">
+
+  <span>回収タンク容量</span>
+  
+  <input type="number" 
+   id="tankCapacity" 
+   step="0" 
+   placeholder="容量">
+  
+  <span>L</span>
+
+</div>
+
+<div class="input-group">
+
+ <span>回収前ガス圧</span>
+ 
+  <input type="number" 
+   id="beforePressure" 
+   step="0.001" 
+   Placeholder="ガス圧">
+
+  <select id="beforeUnit">
+     <option value="MPa,G">MPa・G</option>
+     <option value="MPa,abs">MPa・abs</option>
+     <option value="kgf,G">kgf/cm²・G</option>
+     <option value="kgf,abs">kgf/cm²・abs</option>
+  </select>
+
+</div>
+
+<div class="input-group">
+
+  <span>回収前温度</span>
+  
+  <input type="number" 
+   id="beforeTemp" 
+   step="0.1" 
+   placeholder="温度">
+  
+  <span>℃</span>
+
+</div>
+
+<div class="input-group">
+
+ <span>回収後ガス圧</span>
+
+ <input 
+   type="number" 
+   id="afterPressure" 
+   step="0.001" 
+   Placeholder="ガス圧">
+
+ <select id="afterUnit">
+     <option value="MPa,G">MPa・G</option>
+     <option value="MPa,abs">MPa・abs</option>
+     <option value="kgf,G">kgf/cm²・G</option>
+     <option value="kgf,abs">kgf/cm²・abs</option>
+ </select>
+
+</div>
+
+<div class="input-group">
+
+  <span>回収後温度</span>
+  
+  <input type="number" 
+   id="afterTemp" 
+   step="0.1" 
+   placeholder="温度">
+  
+  <span>℃</span>
+
+</div>
+
+<button onclick= "calcGasWeight()">
+計算
+</button>
+
+<p id="gasWeightResult"></p>
+
+<br>
+<hr>
+<br>
+
+<div class="menu">
+ <a href="index.html" class="card">戻る</a>
+ <a href="../../index.html" class="card">🏠 ホームへ戻る</a>
+</div>
+
+<footer>
+  <img src="../../images/007.png" class="footer-logo">
+  <img src="../../images/006.gif" class="footer-logo">
+  <img src="../../images/SET1.png" class="footer-logo">
+  <span id="version"></span>
+</footer>
+
+<script src="../../version.js"></script>
+
+<script src="../../js/gas/weight.js"></script>
+
+</body>
+</html>
